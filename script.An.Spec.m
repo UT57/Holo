@@ -164,3 +164,9 @@ hold on;
 plot(abs(test), 'r');
 hold off;
 title('Сравнение распределений по осям')
+
+
+
+
+
+
