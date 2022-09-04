@@ -132,32 +132,3 @@ ylabel('Среднее квадратическое отклоение')
 
 
 
-%% Тесты осей
-%Обработка данных на осях
-for iy=1:Ny
-         ck=clock;
-         
-fnm3=['C:\Users\Егор\Documents\Holography\21.10.22Fn0.7Holo\OnZAxisAfter\ScanZ' num2str(iy-1,'%03d') '.txt'];
-         a=caseread(fnm3);
-         x=str2num(a(82:size(a,1),:));
-         for ii=1:length(x(:,1)) %ii=1:floor(length(x(:,1))/5)
-             %downscaling from 25k to 5k
-             %wfm(ii,ix,iy)=x(ii*5,2);
-             wfm2(ii,iy)=x(ii,2); %signal
-         end
-         rt=etime(clock,ck)*(1-(iy-1+ix/Nx)/Ny)*Nx*Ny;
-%%fprintf(['scat calc 'num2str((iyc-1+(iys-1+ixs/Nx)/Ny)/Ny*100,'%04.3f') '%% done,' 'Remaining time = ' ;num2str(rt/60,'%04.1f'),' mins\n'])
-% fprintf(['scat calc 'num2str((iys-1+ixs/Nx)/Ny*100,'%04.3f') '%% done, ','Remaining time =';num2str(rt/60,'%04.1f'),' mins\n'])
-         fprintf(['files loading process' num2str((iy-1+ix/Nx)/Ny*100,'%04.2f') '%% done ','Remaining time =',num2str(rt/60,'%04.1f'),' mins\n'])
-end
-Table_testY = permute(wfm2,[2,1]);
-ff=(-Nt*2)*df/2:df:(Nt*2-1)*df/2;
-fii = find(ff>=1.072*1e6,1);
-for iy=1:Ny
-        S_testY(iy,:)=fftshift(fft(Table_testY(iy,:)));
-        Res_testY(iy) = S_testY(iy,fi*2)*2;
-end
-plot(abs(Res_testY), 'b');
-hold on;
-plot(abs(test), 'r');
-hold off;
