@@ -13,9 +13,6 @@ for iy=1:Ny
         a=caseread(fnm);
         x=str2num(a(82:size(a,1),:));
         for ii=1:length(x(:,1)) 
-            %ii=1:floor(length(x(:,1))/5)
-            %downscaling from 25k to 5k
-            %wfm(ii,ix,iy)=x(ii*5,2);
             wfm(ii,ix,iy)=x(ii,2);      %сигнал
         end
         rt=etime(clock,ck)*(1-(iy-1+ix/Nx)/Ny)*Nx*Ny;
@@ -132,7 +129,4 @@ ylabel('Среднее квадратическое отклоение')
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> c07823cec4f9c62a3ecf76c974e00c20e6a2e630
