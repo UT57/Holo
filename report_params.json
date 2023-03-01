@@ -1,0 +1,19 @@
+{
+    "link": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "X_min": -100,
+        "Y_min": -100,
+        "Z_min": -100,
+        "X_max": 100,
+        "Y_max": 100,
+        "Z_max": 100,
+        "step": 0.1,
+        "mode": [
+            "transducer",
+            "focus"
+        ],
+        "cycle_num": 5
+    }
+}

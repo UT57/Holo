@@ -1,0 +1,16 @@
+1.072MHz, Tpulse=5ms, N=5, Fn0.7, HNA
+
+1) on axis U=5V
+tstart=10mcs, dt=20ns, Nt=10000,dz=0.5mm, Nz=201, Zstart=-40mm, Nav=32, Tav=2000ms
+
+2) on transv. U=10V
+tstart=22mcs, dt=20ns, Nt=5000, Ny=201,dy=0.5mm, in holo plane Zh=-15mm, Nav=32, Tav=700ms
+
+3) OnTransducer before, after U=10V
+tstart=-10mcs, dt=20ns, Nt=5000,Nav=512
+
+1.3) Holo U=10V 
+tstart=22mcs, dt=20ns, Nt=5000, Nx=201, dx=0.5mm, Zh=-15mm, Nav=32, Tav=700ms 
+
+tbefore=21
+tafter=22.5
